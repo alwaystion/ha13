@@ -1,0 +1,223 @@
+type: custom:stack-in-card
+keep:
+  margin: false
+  box_shadow: false
+  background: false
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-entity-card
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        double_tap_action:
+          action: none
+        primary_info: name
+        secondary_info: none
+        icon_type: none
+        layout: vertical
+        entity: person.alwaystion
+        name: 🏳️‍🌈TOU Bill
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-entity-card
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        double_tap_action:
+          action: none
+        primary_info: name
+        secondary_info: none
+        icon_type: none
+        layout: vertical
+        entity: person.alwaystion
+        name: 🌞Peak
+      - type: custom:mushroom-entity-card
+        primary_info: name
+        icon_type: none
+        secondary_info: none
+        layout: vertical
+        entity: person.alwaystion
+        name: 🌙Offpeak
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        double_tap_action:
+          action: none
+      - type: custom:mushroom-entity-card
+        primary_info: name
+        secondary_info: none
+        icon_type: none
+        layout: vertical
+        entity: person.alwaystion
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        double_tap_action:
+          action: none
+        name: 🎀Fee
+      - type: custom:mushroom-entity-card
+        primary_info: name
+        secondary_info: none
+        icon_type: none
+        layout: vertical
+        entity: person.alwaystion
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        double_tap_action:
+          action: none
+        name: 💲Total
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-entity-card
+        entity: sensor.shelly_tou_thb_peak
+        primary_info: state
+        icon_type: none
+        secondary_info: none
+        layout: vertical
+      - type: custom:mushroom-entity-card
+        primary_info: state
+        secondary_info: none
+        icon_type: none
+        entity: sensor.shelly_tou_thb_offpeak
+        layout: vertical
+      - type: custom:mushroom-entity-card
+        primary_info: state
+        secondary_info: none
+        icon_type: none
+        entity: sensor.shelly_tou_thb_fee
+        layout: vertical
+      - type: custom:mushroom-entity-card
+        primary_info: state
+        secondary_info: none
+        icon_type: none
+        entity: sensor.shelly_tou_thb_total
+        layout: vertical
+        alignment: justify
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: entity
+            entity: sensor.home13_tou_monthly_25_peak
+            icon_color: red
+        alignment: center
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: entity
+            entity: sensor.home13_tou_monthly_25_offpeak
+            icon_color: green
+        alignment: center
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: entity
+            entity: null
+            icon_color: green
+        alignment: center
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: entity
+            entity: null
+            icon_color: green
+        alignment: center
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-entity-card
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        double_tap_action:
+          action: none
+        primary_info: name
+        secondary_info: none
+        icon_type: none
+        layout: vertical
+        entity: person.alwaystion
+        name: 🚩Normal Bill
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-entity-card
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        double_tap_action:
+          action: none
+        primary_info: name
+        secondary_info: none
+        icon_type: none
+        layout: vertical
+        entity: person.alwaystion
+        name: 🎡Unit
+      - type: custom:mushroom-entity-card
+        primary_info: name
+        icon_type: none
+        secondary_info: none
+        layout: vertical
+        entity: person.alwaystion
+        name: ⛽️Energy
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        double_tap_action:
+          action: none
+      - type: custom:mushroom-entity-card
+        primary_info: name
+        secondary_info: none
+        icon_type: none
+        layout: vertical
+        entity: person.alwaystion
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        double_tap_action:
+          action: none
+        name: 🎀Fee
+      - type: custom:mushroom-entity-card
+        primary_info: name
+        secondary_info: none
+        icon_type: none
+        layout: vertical
+        entity: person.alwaystion
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        double_tap_action:
+          action: none
+        name: 💲Total
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-entity-card
+        entity: sensor.nr_home13_tou_monthly_total
+        primary_info: state
+        icon_type: none
+        secondary_info: none
+        layout: vertical
+      - type: custom:mushroom-entity-card
+        primary_info: state
+        secondary_info: none
+        icon_type: none
+        entity: sensor.shelly_n_thb_energy
+        layout: vertical
+      - type: custom:mushroom-entity-card
+        primary_info: state
+        secondary_info: none
+        icon_type: none
+        entity: sensor.shelly_n_thb_fee
+        layout: vertical
+      - type: custom:mushroom-entity-card
+        primary_info: state
+        secondary_info: none
+        icon_type: none
+        entity: sensor.shelly_n_thb_total
+        layout: vertical
