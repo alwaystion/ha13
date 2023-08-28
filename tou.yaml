@@ -1,0 +1,42 @@
+type: custom:apexcharts-card
+apex_config:
+  chart:
+    stacked: true
+  xaxis:
+    labels:
+      format: dd
+  legend:
+    show: false
+graph_span: 7d1s
+span:
+  end: day
+show:
+  last_updated: false
+header:
+  show: true
+  show_states: true
+  colorize_states: true
+  title: Mik - TOU Daily
+series:
+  - entity: sensor.utm_mik_tou_monthly_offpeak
+    name: Off Peak
+    type: column
+    unit: ' kWh'
+    color: darkviolet
+    group_by:
+      func: delta
+      duration: 1d
+    show:
+      datalabels: true
+  - entity: sensor.utm_mik_tou_monthly_peak
+    name: Peak
+    type: column
+    unit: ' kWh'
+    color: orangered
+    group_by:
+      func: delta
+      duration: 1d
+    show:
+      datalabels: true
+style: |
+  ha-card {border-radius: 29px; border: 0.2px solid teal }
