@@ -1,0 +1,14 @@
+binary_sensor:
+  - platform: template
+    sensors:
+      offpeak_holiday_weekend:
+        friendly_name: "Offpeak Holiday Weekend"
+        value_template: >
+          {{ (now().month, now().day) in [(1, 1), (4, 15), (5, 1), (5, 22), (6, 3), (8, 12), (10, 23), (12, 5), (12, 10), (12, 31)] 
+             or now().weekday() in [5, 6] }}
+      offpeak_weekend:
+        friendly_name: "Offpeak Normal"
+        value_template: >
+          {{ not ((now().month, now().day) in [(1, 1), (4, 15), (5, 1), (5, 22), (6, 3), (8, 12), (10, 23), (12, 5), (12, 10), (12, 31)] 
+             or now().weekday() in [5, 6])
+             and (22 <= now().hour or now().hour <= 8) }}
